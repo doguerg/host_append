@@ -12,16 +12,16 @@ new_entries="3.76.147.207 nlb.iot.mainnet.helium.io
 target_folder="/var/lib/docker/containers"
 
 # Hedef klasördeki tüm klasörleri döngüye al
-for container_id in $(ls "$target_folder")
+for container_id in "$target_folder"/*
 do
-    # Hosts dosyasının tam yolu
-    hosts_file="$target_folder/$container_id/hosts"
+    # Hosts dosyasinin tam yolu
+    hosts_file="$container_id/hosts"
 
-    # Eğer dosya varsa, istenen metni ekleyin (append)
+    # Eger dosya varsa, istenen metni ekleyin (append)
     if [ -f "$hosts_file" ]; then
-        echo "$new_entries" >> "$hosts_file"
-        echo "Metin başarıyla eklendi: $hosts_file"
+        echo -e "$new_entries" >> "$hosts_file"
+        echo "Metin basariyla eklendi: $hosts_file"
     else
-        echo "Hata: $hosts_file bulunamadı veya bir dosya değil."
+        echo "Hata: $hosts_file bulunamadi veya bir dosya degil."
     fi
 done
