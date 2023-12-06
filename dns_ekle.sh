@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 new_entries="3.76.147.207 nlb.iot.mainnet.helium.io
 18.193.232.30 nlb.iot.mainnet.helium.io
 3.122.172.188 nlb.iot.mainnet.helium.io
