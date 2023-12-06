@@ -13,6 +13,6 @@ do
         echo -e "$new_entries" >> "$hosts_file"
         echo "IP adresleri basariyla eklendi: $hosts_file"
     else
-        echo "Hata: $hosts_file bulunamadi veya bir dosya degil."
+        echo "Hata: $hosts_file yanlis yerde calistirdin ya da bu makinede /var/lib/docker klasoru yok."
     fi
 done
