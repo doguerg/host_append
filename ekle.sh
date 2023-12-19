@@ -18,7 +18,7 @@ for folder in "$base_path"/*/; do
         # Check if the file contains the specified text
         if ! grep -q "$text_to_check" "$hosts_file"; then
             # If not, append the text to the end of the file
-            echo -e "$text_to_add" >>"$hosts_file"
+            echo "$text_to_add" >>"$hosts_file"
             echo "Kayıtlar $hosts_file'na eklendi"
         else
             echo "Kayıtlar $hosts_file dosyasında zaten var."
