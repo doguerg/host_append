@@ -13,6 +13,6 @@ do
         echo -e "$new_entries" >> "$hosts_file"
         echo "IP adresleri basariyla eklendi: $hosts_file"
     else
-        echo "Hata: $hosts_file bulunamadi veya bir dosya degil."
+        echo "Hata: Yanlis yerde calistirdin ya da bu makinede $hosts_file klasoru yok."
     fi
 done
